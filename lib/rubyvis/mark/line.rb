@@ -32,6 +32,9 @@ module Rubyvis
     include LinePrototype
     @properties=Mark.properties.dup
     
+    class << self
+      attr_accessor :stroke_dasharray
+    end
       
     ##
     # :attr: line_width
@@ -75,7 +78,7 @@ module Rubyvis
     
 
     ##
-    :attr: stroke_dasharray
+    # attr: stroke_dasharray
     # Whether the line is dashed using the strokeDasharray SVG property.
     # <p>This property is <i>fixed</i>. See Rubyvis.Mark    
     
